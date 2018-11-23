@@ -10,6 +10,27 @@ def get_ip():
     finally:
         s.close()
     return ip
+
+# 对本机username的获取
+>>> import socket
+>>> socket.gethostname()
+'LattePanda'
+>>> host_name = socket.gethostname()
+>>> host_name
+'LattePanda'
+
+# 对本机ip 的获取（不完全能获取ok）
+>>> socket.gethostbyname(host_name)
+'192.168.2.66'
+
+# 对本机编码的获取
+>>> import locale
+>>> locale.getdefaultlocale()
+('en_US', 'cp1252')
+
+In [1]: import locale
+In [2]: locale.getdefaultlocale()
+Out[2]: ('zh_CN', 'cp936')
 ```
 ### 2-获取电脑的硬件信息 psutil模块
 ```
